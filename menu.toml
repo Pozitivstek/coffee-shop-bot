@@ -1,0 +1,210 @@
+# Меню и данные кофейни «Ягода» (взято с coffee-site). Цены в рублях, целые числа.
+# При первом запуске бот переносит всё это в базу; дальше цены и стоп-лист правятся
+# в админке бота (/admin), а новые позиции подхватываются из этого файла по id.
+
+[shop]
+name = "Кофейня Ягода"
+address = "ул. Садовая, 24, вход со двора"
+phone = "+7 (900) 123-45-67"
+hours = "пн–чт 8:00–21:00, пт 8:00–22:00, сб 9:00–22:00, вс 9:00–20:00"
+timezone = "Europe/Moscow"
+about = "Небольшая кофейня: свежая обжарка, воронка и эспрессо-бар, выпечка каждое утро. Заказывайте здесь — заберёте без очереди."
+
+# ---------------------------------------------------------------- Эспрессо-бар
+[[category]]
+id = "espresso"
+name = "Эспрессо-бар"
+
+  [[category.product]]
+  id = "espresso"
+  name = "Эспрессо"
+  description = "двойной, 18 г зерна"
+    [[category.product.option]]
+    label = "40 мл"
+    price = 180
+
+  [[category.product]]
+  id = "americano"
+  name = "Американо"
+  description = "эспрессо и горячая вода"
+    [[category.product.option]]
+    label = "250 мл"
+    price = 210
+
+  [[category.product]]
+  id = "cappuccino"
+  name = "Капучино"
+  description = "плотная пена, 60 °C"
+    [[category.product.option]]
+    label = "200 мл"
+    price = 260
+    [[category.product.option]]
+    label = "300 мл"
+    price = 310
+
+  [[category.product]]
+  id = "flat-white"
+  name = "Флэт уайт"
+  description = "двойной ристретто, тонкая пена"
+    [[category.product.option]]
+    label = "180 мл"
+    price = 290
+
+  [[category.product]]
+  id = "latte"
+  name = "Латте"
+  description = "мягкий, много молока"
+    [[category.product.option]]
+    label = "300 мл"
+    price = 290
+    [[category.product.option]]
+    label = "400 мл"
+    price = 340
+
+  [[category.product]]
+  id = "cortado"
+  name = "Кортадо"
+  description = "эспрессо и молоко один к одному"
+    [[category.product.option]]
+    label = "120 мл"
+    price = 240
+
+# ---------------------------------------------------------------- Фильтр
+[[category]]
+id = "filter"
+name = "Фильтр"
+
+  [[category.product]]
+  id = "v60"
+  name = "Воронка V60"
+  description = "зерно дня на выбор"
+    [[category.product.option]]
+    label = "250 мл"
+    price = 320
+
+  [[category.product]]
+  id = "aeropress"
+  name = "Аэропресс"
+  description = "плотнее и слаще воронки"
+    [[category.product.option]]
+    label = "220 мл"
+    price = 300
+
+  [[category.product]]
+  id = "chemex"
+  name = "Кемекс на двоих"
+  description = "чистая чашка, бумажный фильтр"
+    [[category.product.option]]
+    label = "500 мл"
+    price = 520
+
+  [[category.product]]
+  id = "cold-brew"
+  name = "Колд брю"
+  description = "настаиваем 16 часов"
+    [[category.product.option]]
+    label = "300 мл"
+    price = 280
+
+# ---------------------------------------------------------------- Не кофе
+[[category]]
+id = "not-coffee"
+name = "Не кофе"
+
+  [[category.product]]
+  id = "cascara"
+  name = "Каскара"
+  description = "чай из сушёной кофейной ягоды"
+    [[category.product.option]]
+    label = "300 мл"
+    price = 240
+
+  [[category.product]]
+  id = "cocoa"
+  name = "Какао"
+  description = "бельгийский шоколад 54 %"
+    [[category.product.option]]
+    label = "300 мл"
+    price = 270
+
+  [[category.product]]
+  id = "matcha-latte"
+  name = "Матча латте"
+  description = "японская матча, молоко на выбор"
+    [[category.product.option]]
+    label = "300 мл"
+    price = 330
+
+  [[category.product]]
+  id = "tea"
+  name = "Чай листовой"
+  description = "улун, сенча, ассам"
+    [[category.product.option]]
+    label = "400 мл"
+    price = 250
+
+# ---------------------------------------------------------------- Выпечка
+[[category]]
+id = "bakery"
+name = "Выпечка"
+
+  [[category.product]]
+  id = "croissant"
+  name = "Круассан"
+  description = "на сливочном масле 82 %"
+    [[category.product.option]]
+    label = "1 шт"
+    price = 190
+
+  [[category.product]]
+  id = "cinnabon"
+  name = "Синнабон"
+  description = "корица и сливочный сыр"
+    [[category.product.option]]
+    label = "1 шт"
+    price = 230
+
+  [[category.product]]
+  id = "banana-bread"
+  name = "Банановый хлеб"
+  description = "с грецким орехом"
+    [[category.product.option]]
+    label = "кусок"
+    price = 210
+
+  [[category.product]]
+  id = "cheesecake"
+  name = "Баскский чизкейк"
+  description = "печём каждое утро"
+    [[category.product.option]]
+    label = "кусок"
+    price = 320
+
+# ---------------------------------------------------------------- Зерно
+[[category]]
+id = "beans"
+name = "Зерно с собой"
+
+  [[category.product]]
+  id = "beans-ethiopia"
+  name = "Эфиопия"
+  description = "Иргачеффе, мытая: бергамот, жасмин, белый персик (фильтр)"
+    [[category.product.option]]
+    label = "250 г"
+    price = 950
+
+  [[category.product]]
+  id = "beans-colombia"
+  name = "Колумбия"
+  description = "Уила, мытая: красное яблоко, карамель, какао (универсал)"
+    [[category.product.option]]
+    label = "250 г"
+    price = 890
+
+  [[category.product]]
+  id = "beans-brazil"
+  name = "Бразилия"
+  description = "Серрадо Минейро, натуральная: молочный шоколад, фундук (эспрессо)"
+    [[category.product.option]]
+    label = "250 г"
+    price = 720
